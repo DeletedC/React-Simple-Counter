@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 
 
@@ -14,6 +14,10 @@ function App() {
   const subtract = () => {
     setCounter(counter - 1);
   }
+
+  useEffect(() => {
+    if (counter % 2 == 0 && counter !== 0) console.log(`${counter} is even! Huzzaaaaah!`);
+  })
 
   return (
     <div className="App">
