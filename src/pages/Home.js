@@ -1,6 +1,12 @@
+import Counter from '../components/Counter';
+
 const Home = () => {
     return (
-           <h1>Home</h1> 
+        <>
+           <h2>Behold!</h2>
+           <h1>THE COUNTER!!!</h1>
+           <Counter />
+        </>
     )
 }
 

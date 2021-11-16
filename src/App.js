@@ -15,7 +15,6 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
         </Routes>
-        <Counter />
       </div>
     </BrowserRouter>
   );
