@@ -1,6 +1,9 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
+import Home from './pages/Home';
+import About from './pages/About';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -20,12 +23,18 @@ function App() {
   })
 
   return (
-    <div className="App">
+    <BrowserRouter>
+      <div className="App">
       <Header />
-      <button onClick={add}>+</button>
-      <h2>{counter}</h2>
-      <button onClick={subtract}>-</button>
-    </div>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+        <button onClick={add}>+</button>
+        <h2>{counter}</h2>
+        <button onClick={subtract}>-</button>
+      </div>
+    </BrowserRouter>
   );
 }
 
