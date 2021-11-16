@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <>
         <h1>React Simple Counter</h1>
-        <ul>
+        <ul className="nav">
           <li>
             <Link to="/">Home</Link>
           </li>
